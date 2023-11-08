@@ -1,0 +1,5 @@
+variable_alias,variable_name,pretty_name,descr,data_type,color,low_alarm,high_alarm,timeframe,alarm_priority,changepoint,ffill_length,lower_bound,upper_bound,system
+#sensor name,#mapped name,,,,#plotting color,,,#duration out of bounds before notification,,,,,,
+mb-001_Power_(kW),System_1_Fan_PowerkW,System 1 Fan Power (kW),The power draw of the system 1 fan coil (kW),kW,,,,,,,,,,System_1
+mb-002_SAT_Ave_(Degrees_F),System_2_Supply_Air_Temp_F,System 2 SAT (Degrees F),"Temperature of the supply air, measured at the downstream side of system 2 (F)",temp,,,,,,,,,,System_2
+,OAT,Outdoor Air Temp (Degrees F),"The outdoor air temperature, calculated using a special function somewhere in the pipeline code (F)",temp,,,,,,,,,,System_2;System_1
