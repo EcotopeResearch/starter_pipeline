@@ -1,4 +1,4 @@
-from ecopipeline import rename_sensors, rename_sensors_by_system, avg_duplicate_times, aggregate_df
+from ecopipeline import rename_sensors, avg_duplicate_times, aggregate_df
 from config import _config_directory, _data_directory, _output_directory, _input_directory
 import pandas as pd
 
