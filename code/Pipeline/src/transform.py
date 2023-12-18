@@ -3,9 +3,9 @@ from config import _config_directory, _data_directory, _output_directory, _input
 import pandas as pd
 
 
-def transform(dataframe): 
+def transform(df): 
     
-    rename_sensors(df) # if multiple systems are being processed, instead use df = rename_sensors_by_system(df, "system_name_goes_here")
+    df = rename_sensors(df)
     
     df = avg_duplicate_times(df, None)
     
