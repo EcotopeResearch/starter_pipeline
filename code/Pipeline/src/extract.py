@@ -1,5 +1,4 @@
 import pandas as pd
-from config import _config_directory, _data_directory, _output_directory, _input_directory
 from ecopipeline import extract_files, csv_to_df, get_last_full_day_from_db, extract_new, json_to_df
 
 def extract():
