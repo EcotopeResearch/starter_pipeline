@@ -48,7 +48,7 @@ def get_most_recent_files(directory_name : str, file_name_suffix : str):
                 most_recent_seen[prefix] = file_date
                 most_recent_filename[prefix] = filename
 
-        return [value for value in most_recent_filename.values()]
+        return sorted([value for value in most_recent_filename.values()])
     
     else:
         raise Exception(f"unrecognized file suffix {file_name_suffix}")
