@@ -47,3 +47,12 @@ To run the pipeline from your Pipeline directory
 
 Once your code is working the way you want it, consider setting up a cron job to automatically run your code on a regular basis to update your database with fresh data.
 
+-----------------------------------------------------------------------------
+------------------THIS NEXT SECTION APPLIES TO ECOTOPE ONLY------------------
+-----------------------------------------------------------------------------
+
+Once the pipeline has been set up to satisfaction, please fill out a new row for the site in the variable_names_locations.csv in the \cron_jobs sub directory 
+of the dash app directory. Then run the population script there
+    
+    $ python populate_config.py
+
