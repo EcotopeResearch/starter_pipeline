@@ -70,6 +70,7 @@ if file_suffix == ".csv":
             # Add the prefix to each column name and store in the list
             for column in header:
                 if column != '-':
+                    column = column.replace(" ","_")
                     column_names.extend([f"{prefix}_{column}"])
 
 elif file_suffix == ".gz":
