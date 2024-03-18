@@ -1,11 +1,12 @@
-from ecopipeline import get_login_info, connect_db, load_overwrite_database
+from ecopipeline.load import load_overwrite_database
+from ecopipeline import ConfigManager
 import pandas as pd
 import traceback
 
-def load(load_dfs: dict):
-    config_dict = get_login_info(load_dfs.keys())
+def load(load_dfs: dict, config : ConfigManager):
     
-    db_connection, db_cursor = connect_db(config_dict['database'])
+    config_dict = config.get_db_table_info(load_dfs.keys()) 
+    db_connection, db_cursor = config.connect_db()
     
     try:
     

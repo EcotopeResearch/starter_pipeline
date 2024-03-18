@@ -1,10 +1,11 @@
-from ecopipeline import rename_sensors, avg_duplicate_times, aggregate_df
+from ecopipeline.transform import rename_sensors, avg_duplicate_times, aggregate_df
 import pandas as pd
+from ecopipeline import ConfigManager
 
 
-def transform(df): 
+def transform(df, config : ConfigManager): 
     
-    df = rename_sensors(df)
+    df = rename_sensors(df, config)
     
     df = avg_duplicate_times(df, None)
     
