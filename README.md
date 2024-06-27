@@ -20,6 +20,12 @@ This will copy this template into the directory. By default, it will call this t
         2. Edit create_full_var_names.py in the top section to set file_suffix = '.gz' and then set Run the command 
             $ python create_full_var_names.py
         3. Fill out the columns (particularly the variable_name column) for each variable you would like to end up in the database. NOTE: make sure you do not include any spaces or commas in the varriable_names column.
+            Work with the project’s design engineer to name points and follow Ecotope’s variable naming conventions:
+            i.	Names should be VariableType_EquipmentName (ex. Flow_HPWH1, PowerIn_SwingTank)
+            ii.	Temperature variables should start with ‘Temp_’
+            iii.	Power variables should start with ‘PowerIn_’
+            iv.	Flow variables should start with ‘Flow_’
+            v.	Calculated heat variables should start with ‘HeatOut_’
         4. In a terminal, navigate to starter_pipeline/code/helpful_scripts/ and run 
             $ python compress_full_varriable_names.py
         This will create a compressed Variable_Names.csv under starter_pipeline/input/
