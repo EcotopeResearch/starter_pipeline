@@ -15,10 +15,11 @@ This will copy this template into the directory. By default, it will call this t
 4. Open starter_pipeline/code/Pipeline/src/extract.py and delete the appropriate block of code to reflect the type of data you will be recieving
 
 5. Once data from the site is landing in starter_pipeline/data/, follow these steps to configure what data will end up in your database table:
-    If the data is in RCC format:
+   
         1. In a terminal, navigate to starter_pipeline/code/helpful_scripts/
-        2. Edit create_full_var_names.py in the top section to set file_suffix = '.gz' and then set Run the command 
+        2. Edit create_full_var_names.py in the top section to set file_suffix = '.gz', or '.csv' if data is in Modbus format,  and then set Run the command 
             $ python create_full_var_names.py
+            This will create a file called variable_names_full.csv under starter_pipeline/input/ that contains all the varriables.
         3. Fill out the columns (particularly the variable_name column) for each variable you would like to end up in the database. NOTE: make sure you do not include any spaces or commas in the varriable_names column.
             Work with the project’s design engineer to name points and follow Ecotope’s variable naming conventions:
             i.	Names should be VariableType_EquipmentName (ex. Flow_HPWH1, PowerIn_SwingTank)
@@ -26,12 +27,6 @@ This will copy this template into the directory. By default, it will call this t
             iii.	Power variables should start with ‘PowerIn_’
             iv.	Flow variables should start with ‘Flow_’
             v.	Calculated heat variables should start with ‘HeatOut_’
-        4. In a terminal, navigate to starter_pipeline/code/helpful_scripts/ and run 
-            $ python compress_full_varriable_names.py
-        This will create a compressed Variable_Names.csv under starter_pipeline/input/
-    If the data is in modbus format:
-        This will create a file called variable_names_full.csv under starter_pipeline/input/ that contains all the varriables from each modbus.
-        3. Fill out the columns (particularly the variable_name column) for each variable you would like to end up in the database. NOTE: make sure you do not include any spaces or commas in the varriable_names column.
         4. In a terminal, navigate to starter_pipeline/code/helpful_scripts/ and run 
             $ python compress_full_varriable_names.py
         This will create a compressed Variable_Names.csv under starter_pipeline/input/
