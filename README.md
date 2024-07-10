@@ -59,8 +59,11 @@ To do this follow these steps:
 a display title for the graph (graph_title), and a title for the y1 and y2 axis (y_1_title and y_2_title respectively). Several default graphs are already present in the file. 
 2. In the Variable_Names.csv file described in step 5 of the DataPipeline section, you will need to fill out the data_type, graph_id, and secondary_axis section. data_type can be any string, however some strings correspond to the data being displayed on certain default graphs and will result in the variable being displayed on that graph (see _getGraphInfo() in ecoviewr package https://github.com/EcotopeResearch/EcoViewer/blob/0.3.3/src/ecoviewer/config/configutils.py). The data_type field must not be null in order for the variable to be displayed on the dashboard. The graph_id field may be left null (if using a default graph), or it must match one of the unique graph_id strings of a graph configured in Graph_Config.csv. The secondary_axis may contain "TRUE" if you want the value to be linked to the y2 axis in the graph, or set to "FALSE" to link the variable to the y1 axis.
 3. Navigate to the /dashviewer directory, activate your dataPipeline anaconda environment (step 3 in the DataPipeline section), and run the following comands:
+
     $ pip install -r requirements.txt
+
     $ python dash_viewer.py
+    
 4. In an internet browser, navigate to the local internet address given to you after starting the dash_viewer.py script (usually http://127.0.0.1:8050/)
 
 -----------------------------------------------------------------------------
