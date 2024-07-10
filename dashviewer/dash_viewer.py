@@ -39,8 +39,7 @@ app.layout = html.Div([
     State('checkbox-selection', 'value'),
 )
 def update_application(n_clicks, selected_table, start_date, end_date, checkbox_selections):
-    user_email = "nolan@ecotope.com"
-    return get_application_content(user_email, n_clicks, selected_table, start_date, end_date, checkbox_selections, app)
+    return get_application_content(n_clicks, selected_table, start_date, end_date, checkbox_selections, app)
 
 @app.callback(
         Output("download", "data"), 
