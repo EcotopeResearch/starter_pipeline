@@ -1,1 +1,11 @@
 graph_id,graph_title,y_1_title,y_2_title,
+tmp_default,Temperature,Temperature (F),Temperature (F)
+pwr_w_default,Power,W,BTU/hr
+pwr_kw_default,Power,kW,kW
+hmd_prs_default,Humidity/Pressure,Percent,PSI
+cnds_default,Condensate/other,Tips,
+flw_default,Flow,GPM,
+vlm_default,Volume,Gallons,
+cop_default,COP,COP,COP
+airflw_default,Airflow,CFM,
+cop_efc_default,COP,COP,Efficiency

@@ -1,0 +1,8 @@
+pandas
+plotly
+dash
+mysql-connector-python==8.0.32
+numpy
+ecoviewer
+statsmodels
+dash_bootstrap_components
