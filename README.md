@@ -1,7 +1,7 @@
 # DataPipeline
 Starter template for data pipelines 
 
-So you want to make a data pipeline, eh? To do this, follow these steps.
+So you want to make a data pipeline, eh? To do this, follow these steps:
 1. In a terminal, navigate to the directory you would like to create the pipeline in. Then run:
 
     $ git clone https://github.com/EcotopeResearch/starter_pipeline.git
@@ -48,6 +48,20 @@ To run the pipeline from your Pipeline directory
     $ python src\pipeline.py
 
 Once your code is working the way you want it, consider setting up a cron job to automatically run your code on a regular basis to update your database with fresh data.
+
+
+# Dash Application
+
+Once you have set up the data pipeline and run it successfully to put data into your database, you can view the data in our out-of-the-box dashboard application.
+To do this follow these steps:
+
+1. in the /input directory, open the file Graph_Config.csv. Inside you will find four columns: graph_id, graph_title, y_1_title, y_2_title. For each graph you would like to be shown in your dashboard application, please fill out a unique id string for the graph (graph_id),
+a display title for the graph (graph_title), and a title for the y1 and y2 axis (y_1_title and y_2_title respectively). Several default graphs are already present in the file. 
+2. In the Variable_Names.csv file described in step 5 of the DataPipeline section, you will need to fill out the data_type, graph_id, and secondary_axis section. data_type can be any string, however some strings correspond to the data being displayed on certain default graphs and will result in the variable being displayed on that graph (see _getGraphInfo() in ecoviewr package https://github.com/EcotopeResearch/EcoViewer/blob/0.3.3/src/ecoviewer/config/configutils.py). The data_type field must not be null in order for the variable to be displayed on the dashboard. The graph_id field may be left null (if using a default graph), or it must match one of the unique graph_id strings of a graph configured in Graph_Config.csv. The secondary_axis may contain "TRUE" if you want the value to be linked to the y2 axis in the graph, or set to "FALSE" to link the variable to the y1 axis.
+3. Navigate to the /dashviewer directory, activate your dataPipeline anaconda environment (step 3 in the DataPipeline section), and run the following comands:
+    $ pip install -r requirements.txt
+    $ python dash_viewer.py
+4. In an internet browser, navigate to the local internet address given to you after starting the dash_viewer.py script (usually http://127.0.0.1:8050/)
 
 -----------------------------------------------------------------------------
 ------------------THIS NEXT SECTION APPLIES TO ECOTOPE ONLY------------------
