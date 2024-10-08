@@ -8,7 +8,7 @@ import gzip
 import json
 
 # ATTENTION: edit the data_directory varriable to be the path to the folder which contains modbus data files
-data_directory = "../../data/Splashblocks/001EC60574D9"
+data_directory = "../../data/path/to/modbus/folder"
 file_suffix = ".csv" # ".gz" or ".csv"
 data_after_year = 2023
 data_after_month = 12
