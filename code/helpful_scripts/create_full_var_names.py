@@ -8,8 +8,8 @@ import gzip
 import json
 
 # ATTENTION: edit the data_directory varriable to be the path to the folder which contains modbus data files
-data_directory = "../../data/path/to/modbus/folder"
-file_suffix = ".gz" # ".gz" or ".csv"
+data_directory = "../../data/Splashblocks/001EC60574D9"
+file_suffix = ".csv" # ".gz" or ".csv"
 data_after_year = 2023
 data_after_month = 12
 data_after_day = 1
@@ -105,7 +105,7 @@ with open(output_file, 'w', newline='') as csvfile:
     writer = csv.writer(csvfile)
     
     # Write the "variable_alias" row
-    fieldnames = ["variable_alias","variable_name","pretty_name","descr","data_type","graph_id","secondary_axis","color","low_alarm","high_alarm","timeframe","alarm_priority","changepoint","ffill_length","lower_bound","upper_bound","system"]  # Get the header from the input CSV
+    fieldnames = ["variable_alias","variable_name","pretty_name","descr","data_type","graph_id","secondary_axis","color","low_alarm","high_alarm","timeframe","alarm_priority","changepoint","ffill_length","lower_bound","upper_bound","system","summary_group"]  # Get the header from the input CSV
     writer.writerow(fieldnames)
     
     # Write the column names with prefixes
