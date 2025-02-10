@@ -34,7 +34,7 @@ This will copy this template into the directory. By default, it will call this t
 6. Since this is just a starter template, you will likely need to make some modifications and customizations to how you process data by editing the contents of pipeline.py, extract.py, transform.py, and/or load.py, all under starter_pipeline/code/Pipeline. Steps for running and testing your code locally can be found below 
 
 To run and test your pipeline code, first set up your anaconda environment from the anaconda prompt
-1. Navigate to your MariaPipeline directory
+1. Navigate to your code/Pipeline directory
 2. Run the following command 
 
     $ conda env create --file dataPipeline.yml
