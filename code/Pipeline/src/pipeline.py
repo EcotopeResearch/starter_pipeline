@@ -1,6 +1,7 @@
 from extract import extract
 from transform import transform
 from load import load
+from alarm import alarm
 from ecopipeline import ConfigManager
 from ecopipeline.load import report_data_loss
 import traceback
@@ -11,6 +12,8 @@ try:
     print("last full day in database found", last_full_day)
 
     transformed_data, hourly_data, daily_data = transform(merged_data.copy(), config)
+
+    # alarm(transformed_data, config)
 
     dfs_to_load = {"minute": transformed_data,
                 "hour": hourly_data,
