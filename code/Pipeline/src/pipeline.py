@@ -13,7 +13,7 @@ try:
 
     transformed_data, hourly_data, daily_data = transform(merged_data.copy(), config)
 
-    # alarm(transformed_data, config)
+    # alarm(transformed_data, config, daily_data.index.to_list())
 
     dfs_to_load = {"minute": transformed_data,
                 "hour": hourly_data,
