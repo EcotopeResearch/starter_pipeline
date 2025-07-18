@@ -23,7 +23,7 @@ try:
 
 except Exception as e: 
     traceback.print_exc()
-    report_data_loss()
+    report_data_loss(config)
 
 
 
